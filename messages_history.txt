@@ -1,0 +1,11 @@
+[05 Apr, 12:56:58] [Ivan] logged in
+[05 Apr, 12:57:01] [Ivan] Hello!
+[05 Apr, 12:57:02] [Ivan] logged out
+[05 Apr, 12:57:03] [Ivan] logged in
+[05 Apr, 13:02:03] [Georgy] logged in
+[05 Apr, 13:02:06] [Maria] logged in
+[05 Apr, 16:01:25] [Alex] logged in
+[05 Apr, 12:57:05] [Ivan] Hello again!
+[05 Apr, 12:57:05] [Ivan] How do you do?[09 апр, 00:56:12] [Fabio] logged in
+[09 апр, 00:56:21] [Fabio] by
+[09 апр, 00:56:33] [Fabio] logged out
