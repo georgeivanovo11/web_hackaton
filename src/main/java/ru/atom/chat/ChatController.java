@@ -11,7 +11,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-import java.io.*;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+
 import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Date;
@@ -31,7 +37,7 @@ public class ChatController {
     private Map<String, String> usersOnline;
 
     public ChatController() {
-        messages = ReadFromFileToHistory();
+        messages = readFromFileToHistory();
         usersOnline = new ConcurrentHashMap<>();
     }
 
@@ -60,7 +66,7 @@ public class ChatController {
 
         String message = "[" + dateFormat.format(now) + "] [" + name + "] logged in";
         messages.add(message);
-        WriteToFile(message);
+        writeToFile(message);
         return ResponseEntity.ok().build();
     }
 
@@ -114,7 +120,7 @@ public class ChatController {
 
         String message = "[" + dateFormat.format(now) + "] [" + name + "] logged out";
         messages.add(message);
-        WriteToFile(message);
+        writeToFile(message);
         return ResponseEntity.ok().build();
     }
 
@@ -142,27 +148,27 @@ public class ChatController {
 
         String message = "[" + dateFormat.format(now) + "] [" + name + "] " + msg;
         messages.add(message);
-        WriteToFile(message);
+        writeToFile(message);
         return ResponseEntity.ok().build();
     }
 
-    private void WriteToFile(String msg) {
-        try(FileWriter fw = new FileWriter(HISTORY_FILE_NAME, true);
+    private void writeToFile(String msg) {
+        try (FileWriter fw = new FileWriter(HISTORY_FILE_NAME, true);
             BufferedWriter bw = new BufferedWriter(fw);
-            PrintWriter out = new PrintWriter(bw))
-        {
+            PrintWriter out = new PrintWriter(bw)
+            ) {
             out.println(msg);
         } catch (IOException e) {
             System.out.println("Error while writing message to file");
         }
     }
 
-    private ConcurrentLinkedQueue ReadFromFileToHistory() {
+    private ConcurrentLinkedQueue readFromFileToHistory() {
         ConcurrentLinkedQueue<String> result = new ConcurrentLinkedQueue<>();
 
-        try(FileReader fr = new FileReader(HISTORY_FILE_NAME);
-            BufferedReader br = new BufferedReader(fr))
-        {
+        try (FileReader fr = new FileReader(HISTORY_FILE_NAME);
+            BufferedReader br = new BufferedReader(fr)
+            ) {
             String line = br.readLine();
             while (line != null && !line.equals("")) {
                 result.add(line);
