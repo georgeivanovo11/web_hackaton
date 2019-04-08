@@ -1,1 +1,10 @@
 language: java
+deploy:
+      - provider: s3
+      - provider: codedeploy
+        access_key_id: "AKIAILFARDVQLP5W5Y7A"
+        secret_access_key: "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"
+        bucket: "drilldown-audio"
+        key: latest/MyApp.zip
+        application: MyApp
+        deployment_group: MyDeploymentGroup
