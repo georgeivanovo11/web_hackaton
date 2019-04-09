@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -44,6 +45,7 @@ public class ChatController {
     /**
      * curl -X POST -i localhost:8080/chat/login -d "name=I_AM_STUPID"
      */
+    @CrossOrigin
     @RequestMapping(
             path = "login",
             method = RequestMethod.POST,
@@ -73,6 +75,7 @@ public class ChatController {
     /**
      * curl -i localhost:8080/chat/chat
      */
+    @CrossOrigin
     @RequestMapping(
             path = "chat",
             method = RequestMethod.GET,
@@ -87,6 +90,7 @@ public class ChatController {
     /**
      * curl -i localhost:8080/chat/online
      */
+    @CrossOrigin
     @RequestMapping(
             path = "online",
             method = RequestMethod.GET,
@@ -104,6 +108,7 @@ public class ChatController {
     /**
      * curl -X POST -i localhost:8080/chat/logout -d "name=I_AM_STUPID"
      */
+    @CrossOrigin
     @RequestMapping(
             path = "logout",
             method = RequestMethod.POST,
@@ -128,6 +133,7 @@ public class ChatController {
     /**
      * curl -X POST -i localhost:8080/chat/say -d "name=I_AM_STUPID&msg=Hello everyone in this chat"
      */
+    @CrossOrigin
     @RequestMapping(
             path = "say",
             method = RequestMethod.POST,
