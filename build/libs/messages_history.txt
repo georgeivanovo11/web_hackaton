@@ -1,1 +1,3 @@
-[09 апр, 03:34:03] [h] logged in
+
+[09 апр, 03:52:32] [ivan] logged in
+[09 апр, 03:52:48] [ivan] my name is Ivan

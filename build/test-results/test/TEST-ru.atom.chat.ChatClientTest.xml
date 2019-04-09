@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.atom.chat.ChatClientTest" tests="4" skipped="4" failures="0" errors="0" timestamp="2019-04-09T00:46:05" hostname="MacBook-Pro-Georgij.local" time="0.002">
+<testsuite name="ru.atom.chat.ChatClientTest" tests="4" skipped="4" failures="0" errors="0" timestamp="2019-04-09T01:20:36" hostname="MacBook-Pro-Georgij.local" time="0.001">
   <properties/>
-  <testcase name="viewOnline" classname="ru.atom.chat.ChatClientTest" time="0.0">
+  <testcase name="viewOnline" classname="ru.atom.chat.ChatClientTest" time="0.001">
     <skipped/>
   </testcase>
   <testcase name="say" classname="ru.atom.chat.ChatClientTest" time="0.0">
