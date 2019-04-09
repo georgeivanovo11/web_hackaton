@@ -18,7 +18,7 @@ public class ChatApplication {
         return new WebMvcConfigurerAdapter() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("*").allowedHeaders("*");
+                registry.addMapping("*").allowedOrigins("*").allowedHeaders("*");
             }
         };
     }
