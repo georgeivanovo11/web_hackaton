@@ -45,7 +45,7 @@ public class ChatController {
     /**
      * curl -X POST -i localhost:8080/chat/login -d "name=I_AM_STUPID"
      */
-    @CrossOrigin(origins = "*")
+    @CrossOrigin(origins = "http://34.210.203.44:8080")
     @RequestMapping(
             path = "login",
             method = RequestMethod.POST,
@@ -75,7 +75,7 @@ public class ChatController {
     /**
      * curl -i localhost:8080/chat/chat
      */
-    @CrossOrigin(origins = "*")
+    @CrossOrigin(origins = "http://34.210.203.44:8080")
     @RequestMapping(
             path = "chat",
             method = RequestMethod.GET,
@@ -90,7 +90,7 @@ public class ChatController {
     /**
      * curl -i localhost:8080/chat/online
      */
-    @CrossOrigin(origins = "*")
+    @CrossOrigin(origins = "http://34.210.203.44:8080")
     @RequestMapping(
             path = "online",
             method = RequestMethod.GET,
@@ -108,7 +108,7 @@ public class ChatController {
     /**
      * curl -X POST -i localhost:8080/chat/logout -d "name=I_AM_STUPID"
      */
-    @CrossOrigin(origins = "*")
+    @CrossOrigin(origins = "http://34.210.203.44:8080")
     @RequestMapping(
             path = "logout",
             method = RequestMethod.POST,
@@ -133,7 +133,7 @@ public class ChatController {
     /**
      * curl -X POST -i localhost:8080/chat/say -d "name=I_AM_STUPID&msg=Hello everyone in this chat"
      */
-    @CrossOrigin(origins = "*")
+    @CrossOrigin(origins = "http://34.210.203.44:8080")
     @RequestMapping(
             path = "say",
             method = RequestMethod.POST,
