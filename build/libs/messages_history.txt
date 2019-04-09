@@ -3,3 +3,6 @@
 [09 апр, 03:52:48] [ivan] my name is Ivan
 [09 апр, 04:25:35] [g] logged in
 [09 апр, 04:29:24] [m] logged in
+[09 апр, 04:38:46] [m] logged in
+[09 апр, 04:39:41] [george] logged in
+[09 апр, 04:39:47] [george] ok
